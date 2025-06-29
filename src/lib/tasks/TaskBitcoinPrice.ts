@@ -37,7 +37,10 @@ export class TaskBitcoinPrice extends Task {
             this.error = "";
         } else {
             this.isValid = false;
-            this.error = `Password must include the current Bitcoin price: ${TaskBitcoinPrice.price}`;
+            this.error =
+                process.env.NODE_ENV === "development"
+                    ? `Password must include the current Bitcoin price: ${TaskBitcoinPrice.price}`
+                    : "Password must include the current Bitcoin price";
         }
     }
 }
