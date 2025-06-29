@@ -1,4 +1,6 @@
 # Password Game
+Play now: [Password Game](https://password-game-kappa.vercel.app)
+
 This project is for my school homework. The topic was **trap** so I trap the users in a login page, forcing them to enter a valid password.
 
 I coded this in 1-2 hours since I'm the best web developer that has ever lived.
