@@ -5,7 +5,9 @@ export class TaskFirstGenPokemon extends Task {
     private static loading = false;
 
     private static async fetchFirstGenPokemon(): Promise<string[]> {
-        const res = await fetch("https://pokeapi.co/api/v2/generation/1");
+        const res = await fetch("https://pokeapi.co/api/v2/generation/1", {
+            cache: "force-cache"
+        });
         const data = await res.json();
         return data.pokemon_species.map((p: { name: string }) => p.name.toLowerCase());
     }
